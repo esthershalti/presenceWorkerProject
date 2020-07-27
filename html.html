@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            direction: rtl;
+            background-color: black;
+            background-image: url("חו.PNG");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            color: white;
+        }
+
+        .a {
+            margin-right: 5%;
+            margin-top: 0.2%;
+            padding: 1%;
+
+            border: dashed linen 2px;
+            position: fixed;
+        }
+
+        .b {
+            margin-right: 20%;
+            padding: 1.5%;
+            border: dashed linen 2px;
+            position: fixed;
+        }
+
+        .c {
+            margin-right: 46%;
+            padding: 1.5%;
+            border: dashed linen 2px;
+            position: fixed;
+        }
+
+        .d {
+            margin-right: 64%;
+            /* margin-top: 20%; */
+            padding: 1.5%;
+            border: dashed linen 2px;
+            position: fixed;
+        }
+
+        #i {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h3 {
+            color: lavender;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-right: 45%;
+        }
+
+        #block1 {
+            border: solid 4px whitesmoke;
+            text-align: right;
+            direction: rtl;
+            width: 300px;
+            margin-top: 10px;
+            margin-left: 50%;
+        }
+
+        #block2 {
+            border: solid 4px whitesmoke;
+            text-align: right;
+            direction: rtl;
+            width: 200px;
+            margin-right: 65%;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>נוכחות עובדים</h1>
+    <div class="a">
+        <h3>הוספת עובד</h3>
+        <input type="text" id="tz" placeholder="הכנס ת'ז" />
+        <br><br>
+        <input type="text" id="firstName" placeholder="הכנס שם" />
+        <br><br>
+        <input type="text" id="lastName" placeholder="הכנס משפחה" />
+        <br><br>
+        <input type="text" id="phone" placeholder="הכנס טלפון" />
+        <br><br>
+        <input type="text" id="mail" placeholder="הכנס מייל" />
+        <br><br>
+        <input type="text" id="address" placeholder="הכנס כתובת" />
+        <br><br>
+        <input type="button" onclick="addWorker()" value="לחץ להוספת עובד">
+        <br><br>
+    </div>
+    <div class="b">
+        <h3>הכנס ת"ז לקבלת פרטי עובד</h3>
+        <br>
+        <input type="text" id="Id" placeholder="הכנס ת'ז" />
+        <br><br>
+        <input type="button" onclick="getWorkerByID()" value="לחץ להצגת עובד">
+        <br><br>
+        <input type="button" onclick="deleteWorkerByID()" value="לחץ למחיקת עובד">
+        <br><br>
+        <input type="button" onclick="DataUpdate()" value="לחץ להצגת פרטי עובד לעדכון">
+        <br><br>
+        <input type="button" onclick="UpdateWorker()" value="לחץ לעדכון עובד">
+        <br><br>
+        <input type="button" onclick="listOfNamePhone()" value="קבלת רשימת שמות וטלפונים">
+        <br><br>
+        <input type="button" onclick="shutDowm()" value="סגור" visibility="hidden" />
+        <div id="block1"></div>
+        <br><br><br>
+    </div>
+
+    <div class="c">
+        <h3>נוכחות עובדים</h3>
+        <br>
+        <input type="text" id="IdP" placeholder="הכנס ת'ז" />
+        <br><br>
+        <input type="date" id="date" placeholder="תאריך" />
+        <br><br>
+        <input type="time" id="s" placeholder="שעת התחלה" />
+        <br><br>
+        <input type="time" id="e" placeholder="שעת סיום" />
+        <br><br>
+        <input type="button" onclick="addingHour()" value="הוספת השעות">
+        <br>
+
+    </div>
+    <div class="d">
+        <input type="text" id="lastID" placeholder="הכנס תז" />
+        <br><br>
+        <input type="button" onclick="showPresence()" value='לחץ לקבלת דוח נוכחות'>
+        <br>
+    </div>
+    <div id="block2"></div>
+
+</body>
+
+</html>
